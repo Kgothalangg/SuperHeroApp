@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 247, 255, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.nav-links a.active {
+    background: rgba(0, 247, 255, 0.2);
+    color: #00f7ff;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-container {
+    position: relative;
+    padding: 20px 0;
+    margin: 40px 0;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: gray;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.scroll-btn:hover {
+    background: rgba(0, 247, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.7);
+}
+
+#scrollLeft {
+    margin-top: 250px;
+    border-radius: 50% 50% 50% 50%;
+    float: left;
+    position: relative;
+    left: -50px;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: gray;
+    padding: 15px;
+}
+
+#scrollRight {
+    margin-top: 250px;
+    border-radius: 50% 50% 50% 50%;
+    float: right;
+    right: -50px;
+    position: relative;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: gray;
+    padding: 15px;
+}
+
+.gallery {
+    display: flex;
+    gap: 30px;
+    padding: 30px 50px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.flip-card {
+    width: 280px;
+    height: 380px;
+    perspective: 1000px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+    transform: translateY(-10px);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image {
+    width: 180px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+}
+
+.hero-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    transform: rotateY(180deg);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-name-back {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00f7ff;
+    text-align: center;
+}
+
+.hero-info {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+p{
+    justify-content: center;
+    text-align: center;
+    float: center;
+    position: relative;
+}
+
+.stat {
+    background: rgba(0, 247, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.scroll-hint {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.7;
+    font-size: 1.1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.power-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin: 10px 0 20px;
+    overflow: hidden;
+}
+
+.power-level {
+    height: 100%;
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    border-radius: 4px;
+}
+
+.flip-instruction {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0 20px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+        /* Responsive design */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 15px;
+    }
+            
+    .nav-links a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+            
+    .scroll-btn {
+        width: 50px;
+        height: 50px;
+    }
+            
+    #scrollLeft {
+        left: -20px;
+    }
+            
+    #scrollRight {
+        right: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+            
+    .flip-card {
+        width: 250px;
+        height: 350px;
+    }
+            
+    .hero-image {
+        width: 160px;
+        height: 160px;
+    }
+            
+    .navbar {
+        flex-wrap: wrap;
+    }
+            
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+            
+    .nav-links.show {
+        display: flex;
+    }
+            
+    .menu-toggle {
+        display: block;
+    }
+            
+    .scroll-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+            
+    #scrollLeft {
+        left: -15px;
+    }
+            
+    #scrollRight {
+        right: -15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery {
+        padding: 30px 40px;
+    }
+            
+    .scroll-btn {
+        display: none;
+    }
+}

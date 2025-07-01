@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgothalang | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/marvell.jpg" alt="Logo" width="100px" class="logo-icon">
+                    <div class="logo-text">KGOTHALANG IAN GALEEMELWE
+                    </div>
+            </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i>Home</a>
+            <a href="about-me.html"><i class="fas fa-users"></i>About Me</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="mode-toggle" id="modeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="profile-container">
+            <div class="hexagon">
+                <img src="images/kgothalang.jpg" alt="Kgothalang Ian Galeemelwe" class="profile-img">
+            </div>
+        </div>
+        <div class="hero-content">
+            
+            <h1>Kgothalang Ian Galeemelwe</h1>
+            <h2>Front End Developer & UI/UX Student</h2>
+            <p class="bio">
+            <h4>Hi, my name is Kgothalang, and I am studying coding with the FNB App Academy | IT Varsity.
+            I am a passionate Front End developer and UI/UX student of 9 weeks experience creating beautiful, functional, and user-friendly digital experiences. 
+            Here in FNB App Academy, we specialize in transforming complex problems into intuitive, accessible solutions.
+            </h4>
+            </p>
+
+            <p class="bio">
+            <h4>posses Comptia A+, N+, MCSA and MCSE qualifications, so if I am not coding, you will find me exploring new technologies, or creating content to share my knowledge with the developer community. I believe in continuous learning and pushing the boundaries of what's possible on the web. 
+            
+            This is my second version of my very first app, Super Hero App. This is after I tasted Javascript.
+                <br/>
+            I wanted to create a more interactive and dynamic experience for users, so I decided to incorporate Javascript into the project.</h4>
+            </p>
+            
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>My Journey</h3>
+                    <p>So far its been good, challenging, and rewarding. I've learned a lot about frontend development and UI/UX design, and I'm excited to keep growing in this field.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" style="background: var(--card-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/hero.png" alt="Super Hero App" class="card-img">
+                    <div class="card-content">
+                        <h3>Super Hero App</h3>
+                        <p>A Website for Marvel heroes detailing their background and strength.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/zoo.png" alt="Pine City Zoo App" class="card-img">
+                    <div class="card-content">
+                        <h3>Pine Zoo App</h3>
+                        <p>Attracting people to visit a zoo, ensuring to update them with the weather and giving them direction, and giving the more information about the animals and the place around zoo, using only html and CSS.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/calculator.png" alt="Calculator App" class="card-img">
+                    <div class="card-content">
+                        <h3>Calculator App</h3>
+                        <p>A full functioning calculator using html, CSS and Javascript.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Let's Connect!</h3>
+            <p>Have a project in mind or just want to chat about tech? Feel free to reach out!</p>
+            <div class="social-links" style="margin-top: 30px; justify-content: center;">
+                <a href="https://github.com" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="mailto:https://mail.google.com/mail/u/0/" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p style="margin-top: 30px;">© Kgothalang Ian Galeemelwe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark/Light mode toggle
+        const modeToggle = document.getElementById('modeToggle');
+        const icon = modeToggle.querySelector('i');
+        
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

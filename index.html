@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero | Ikgothalangg</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+       
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/marvell.jpg" alt="Logo" width="100px" class="logo-icon">
+            <div class="logo-text">SUPER HERO APP 
+            </div>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i>Home</a>
+            <a href="about-me.html"><i class="fas fa-users"></i>About Me</a>
+        </div>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+        <div class="controls">
+            <button id="scrollLeft"><i class="fas fa-arrow-left"></i></button>
+            <button id="scrollRight"><i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery">
+               
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/thor.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">THOR</div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">THOR</div>
+                            <div class="hero-info">
+                                <p><h6>Thor, the God of Thunder, wields the enchanted hammer Mjolnir. He is a powerful warrior with control over lightning and storms, and he possesses superhuman strength and durability.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>70%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>92%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>100%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 100%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/ironman.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">IRON MAN</div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 100%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">IRON MAN</div>
+                            <div class="hero-info">
+                                <p><h6>Iron Man, also known as Tony Stark, is a genius billionaire and philanthropist who created a powered suit of armor to save his life and protect the world.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>85%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>58%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>85%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>64%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 100%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/hulk.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">HULK</div>
+                            <p>Click to reveal secrets</p>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 52%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">HULK</div>
+                            <div class="hero-info">
+                                <p><h6>HULK, also known as Bruce Banner, is a brilliant scientist with a genius-level intellect. However, after a gamma radiation accident, he transforms into the Hulk when he experiences intense anger or stress, gaining immense strength and durability.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>88%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>47%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>100%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>52%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>85%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/hawkeye.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">HAWKEYE</div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 26%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">HAWKEYE</div>
+                            <div class="hero-info">
+                                <p><h6>Hawkeye, also known as Clint Barton, is a master archer and marksman. He is known for his exceptional accuracy with a bow and arrow, and he often uses trick arrows with various capabilities.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>50%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>12%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>23%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>14%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>26%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>80%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to flip back
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/captainamerica.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">CAPTAIN AMERICA</div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">CAPTAIN AMERICA</div>
+                            <div class="hero-info">
+                                <p><h6>Captain America, also known as Steve Rogers, is a super-soldier with enhanced strength, agility, and endurance. He wields a vibranium shield and is known for his leadership and combat skills.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>63%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>19%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>35%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>56%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>55%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>100%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blackwidow.jpg" alt="Superhero" class="hero-image">
+                            <div class="hero-name">BLACK WIDOW</div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 39%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="hero-name-back">BLACK WIDOW</div>
+                            <div class="hero-info">
+                                <p><h6>Black Widow, also known as Natasha Romanoff, is a highly skilled spy and assassin. She possesses enhanced agility, reflexes, and combat skills, making her a formidable opponent.</h6></p>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat"><h6><b>Intelligence:</b></h6> <h6>75%</h6></div>
+                                <div class="stat"><h6><b>Strength:</b></h6> <h6>13%</h6></div>
+                                <div class="stat"><h6><b>Speed:</b></h6> <h6>27%</h6></div>
+                                <div class="stat"><h6><b>Durability:</b></h6> <h6>32%</h6></div>
+                                <div class="stat"><h6><b>Power:</b></h6> <h6>39%</h6></div>
+                                <div class="stat"><h6><b>Combat:</b></h6> <h6>100%</h6></div>
+                            </div>
+                            <div class="power-bar">
+                                <div class="power-level" style="width: 95%"></div>
+                            </div>
+                            <div class="flip-instruction">
+                                <i class="fas fa-sync-alt"></i> Click to reveal secrets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <i class="fas fa-arrows-alt-h"></i> Scroll to see more superheroes
+        </div>
+
+        <div class="footer">
+            <div class="terms">
+                <i class="fas fa-check-circle"></i>
+                <p>Ikgothalangg | Second Try</p>
+                <p>A tribute  not only to our heroes, but to the ITVarsity and FNB Academy App for fostering creativity and innovation.</p>
+                <p>Super Hero App <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                <img src="images/app1.png" alt="Logo" width="70px" class="footer-logo">
+                <img src="images/itvarsity.png" alt="Logo" width="70px" class="footer-logo">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+
+        
+        const gallery = document.querySelector('.gallery');
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+
+        scrollLeftBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', function() {
+                
+                document.querySelectorAll('.flip-card').forEach(otherCard => {
+                    if (otherCard !== this && otherCard.classList.contains('flipped')) {
+                        otherCard.classList.remove('flipped');
+                    }
+                });
+            });
+        });
+    </script>
+</html>
